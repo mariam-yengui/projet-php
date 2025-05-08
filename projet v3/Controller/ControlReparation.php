@@ -8,11 +8,11 @@ include("../model/Reparation.php");
 if (isset($_GET['idModifier'])) {
     if (Reparation::StartRepair( $_GET['idModifier'])) {
         
-        header('Location: ../vue/myRep.php');
+        header('Location: ../vue/techRep.php');
         
     } else {
         echo "<script>alert('Erreur lors de la mise à jour de la réparation.');</script>";
-        header('Location: ../vue/myRep.php');
+        header('Location: ../vue/techRep.php');
         }
 }
 
@@ -70,6 +70,13 @@ if (isset($_POST['ajouter'])) {
             exit;
         }
 
+        // $date_plus_un_an = date('Y-m-d', strtotime($date_depot . ' - 1 year'));
+
+        // if (date('Y-m-d', strtotime($date_depot)) > $date_plus_un_an) {
+        //     header('Location: ../vue/ajoutRep.php?erreur=4');
+        //     exit;
+        // }
+
         if (date('Y-m-d', strtotime($date_depot)) > date('Y-m-d', strtotime($date_fin_prevue))) {
             header('Location: ../vue/ajoutRep.php?erreur=3');
             exit;
@@ -122,10 +129,12 @@ if (isset($_POST['update']))
         $id_appareil = $_POST['id_appareil'];
         $id_technicien = $_POST['id_technicien'];
         $statut = $_POST['statut'];
+
         if (empty($_POST['date_fin_reelle'])) {
             $date_fin_reelle = null;
         } else {
             $date_fin_reelle = $_POST['date_fin_reelle'];
+            $statut = 2; // Terminé
         }
 
         if (Reparation::ModifierReparation($id, $date_depot, $date_fin_prevue, $panne, $cout, $id_appareil, $id_technicien, $statut, $date_fin_reelle)) {

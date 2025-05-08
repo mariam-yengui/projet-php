@@ -30,7 +30,9 @@ $appareils = Appareil::findAll(); // Assuming a method to fetch all devices
         <div class="form-group">
             <label for="date_depot">Date de Dépôt :</label>
             <input type="date" id="date_depot" name="date_depot" required>
-            <?php if (isset($_GET['erreur']) && $_GET['erreur'] == 2) echo "<span style='color:red;'>Erreur date depot doit etre inferieur du date d'aujourdhui</span>"; ?>
+            <?php if (isset($_GET['erreur']) && $_GET['erreur'] == 2) 
+            echo "<span style='color:red;'>Erreur date depot doit etre inferieur du date d'aujourdhui</span>";
+            else if (isset($_GET['erreur']) && $_GET['erreur'] == 4)  ?>
         </div>
 
         <div class="form-group">

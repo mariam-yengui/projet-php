@@ -9,16 +9,6 @@ if (!isset($_SESSION['login']))
         include("../model/Reparation.php");
    $tab = Appareil::findbyidClient($_SESSION['id']);
 
-   $num_en_attente = array_filter($tab, function($rep) {
-    return $rep->statut == "En attente";
-});
-$num_en_reparation = array_filter($tab, function($rep) {
-    return $rep->statut == "En réparation";
-});
-$num_termine = array_filter($tab, function($rep) {
-    return $rep->statut == "Terminé";
-});
-
 ?>
 
 <!DOCTYPE html>
@@ -37,29 +27,6 @@ $num_termine = array_filter($tab, function($rep) {
 <body>
 <section id="minContent">
     <main>
-    <ul class="box-info">
-        <li>
-        	<i class='bx bxs-calendar-check' ></i>
-    	<span class="text">
-        		<h3><?php echo sizeof($num_en_attente); ?></h3>
-    		<p>En attente</p>
-	</span>
-</li>
-    <li>
-        	<i class='bx bxs-group' ></i>
-    	<span class="text">
-        		<h3><?php echo sizeof($num_en_reparation); ?></h3>
-    		<p>En reparation</p>
-	</span>
-</li>
-    <li>
-        	<i class='bx bxs-dollar-circle' ></i>
-    	<span class="text">
-        		<h3><?php echo sizeof($num_termine); ?></h3>
-    		<p>Termine</p>
-	</span>
-</li>
-</ul>
 <div class="table-data">
     <div class="order">
 		<div class="head">

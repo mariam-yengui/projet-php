@@ -31,7 +31,6 @@ session_start();
                 <th>email</th>
                 <th>address</th>
                 <th>telephone</th>
-
             </tr>
             <?php
                 include("../model/user.php");
