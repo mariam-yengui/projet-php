@@ -1,0 +1,197 @@
+#minContent {
+	position: relative;
+	/* width: calc(100% - 280px); */
+	/* right: 280px; */
+	transition: .3s ease;
+}
+
+#minContent main .table-data {
+
+	display: flex;
+
+	flex-wrap: wrap;
+
+	grid-gap: 24px;
+
+	margin-top: 24px;
+
+	width: 100%;
+
+	color: var(--dark);
+
+	font-family: var(--lato);
+
+	padding: 0 40px;
+}
+
+#minContent main .table-data > div {
+
+	border-radius: 20px;
+
+	background: var(--light);
+
+	padding: 24px;
+
+	overflow-x: auto;
+
+}
+
+#minContent main .table-data .head {
+
+	display: flex;
+
+	align-items: center;
+
+	grid-gap: 16px;
+
+	margin-bottom: 24px;
+
+}
+
+#minContent main .table-data .head h3 {
+
+	margin-right: auto;
+
+	font-size: 24px;
+
+	font-weight: 600;
+
+}
+
+#minContent main .table-data .head .bx {
+
+	cursor: pointer;
+
+}
+
+
+
+#minContent main .table-data .order {
+
+	flex-grow: 1;
+
+	flex-basis: 500px;
+
+}
+
+#minContent main .table-data .order table {
+
+	width: 100%;
+
+	border-collapse: collapse;
+
+}
+
+#minContent main .table-data .order table th {
+
+	padding-bottom: 12px;
+
+	font-size: 13px;
+
+	text-align: left;
+
+	border-bottom: 1px solid var(--grey);
+
+}
+
+#minContent main .table-data .order table td {
+
+	padding: 16px 0;
+
+}
+
+#minContent main .table-data .order table tr td:first-child {
+
+	display: flex;
+
+	align-items: center;
+
+	grid-gap: 12px;
+
+	padding-left: 6px;
+
+}
+
+#minContent main .table-data .order table td img {
+
+	width: 36px;
+
+	height: 36px;
+
+	border-radius: 50%;
+
+	object-fit: cover;
+
+}
+
+#minContent main .table-data .order table tbody tr:hover {
+
+	background: var(--grey);
+
+}
+
+#minContent main .table-data .order table tr td .status {
+
+	font-size: 10px;
+
+	padding: 6px 16px;
+
+	color: var(--light);
+
+	border-radius: 20px;
+
+	font-weight: 700;
+
+}
+
+#minContent main .table-data .order table tr td .status.completed {
+
+	background: var(--blue);
+
+}
+
+#minContent main .table-data .order table tr td .status.process {
+
+	background: var(--yellow);
+
+}
+
+#minContent main .table-data .order table tr td .status.pending {
+
+	background: var(--orange);
+
+}
+
+.startbtn {
+	text-decoration: none;
+	border: 1px solid var(--blue);
+	border-radius: 20px;
+	background: var(--blue);
+
+	color: var(--light);
+
+	padding: 6px 16px;
+
+	border-radius: 20px;
+
+	font-weight: 700;
+}
+
+.finbtn {
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	background: var(--red);
+
+	color: var(--light);
+
+	padding: 6px 16px;
+
+	border-radius: 20px;
+
+	font-weight: 700;
+}
+
+
+
+
