@@ -13,34 +13,38 @@
         if ($_GET['idMod']) {
             include("../model/user.php");
             $technician = User::findbyid($_GET['idMod']);
-            if ($technician) {?>
-                <h1>Modifier le Technicien</h1>
-                <form method='POST' action='../Controller/ControlUser.php'>";
-                <input type='hidden' name='id_t' value='<?php echo $technician->id; ?>' required>
+            if ($technician) {
+                echo "<h1>Modifier le Technicien</h1>";
+                echo "<form method='POST' action='../Controller/ControlUser.php'>";
+                echo "<input type='hidden' name='id_t' value='" . $technician->id . "'>";
 
-                <div class='form-group'>
-                <label for='nom'>Nom:</label>";
-                <input type='text' id='nom' name='nom_t' value='<?php echo $technician->nom;?>' required>
-                </div>
-                <div class='form-group'>
-                <label for='email'>Email:</label>
-                <input type='email' id='email' name='email_t' value='<?php echo $technician->email; ?>' required>
-                </div>
-                <div class='form-group'>"
-                <label for='adresse'>Adresse:</label>"
-                <input type='text' id='adresse' name='adresse_t' value='<?php echo $technician->adresse?> 'quired>
-                </div>
-                <div class='form-group'>
-                <label for='tel'>Téléphone:</label>
-                <input type='text' id='tel' name='tel_t' value='<?php echo$technician->tel?>' required>
-                </div>
-                <div class='button-group'>
-                <button type='submit' name='tech_modifier'>Modifier</button>
-                
-                </div>";
+                echo "<div class='form-group'>";
+                echo "<label for='nom'>Nom:</label>";
+                echo "<input type='text' id='nom' name='nom_t' value='" . htmlspecialchars($technician->nom) . "' required>";
+                echo "</div>";
+
+                echo "<div class='form-group'>";
+                echo "<label for='email'>Email:</label>";
+                echo "<input type='email' id='email' name='email_t' value='" . htmlspecialchars($technician->email) . "' required>";
+                echo "</div>";
+
+                echo "<div class='form-group'>";
+                echo "<label for='adresse'>Adresse:</label>";
+                echo "<input type='text' id='adresse' name='adresse_t' value='" . htmlspecialchars($technician->adresse) . "' required>";
+                echo "</div>";
+
+                echo "<div class='form-group'>";
+                echo "<label for='tel'>Téléphone:</label>";
+                echo "<input type='text' id='tel' name='tel_t' value='" . htmlspecialchars($technician->tel) . "' required>";
+                echo "</div>";
+
+                echo "<div class='button-group'>";
+                echo "<button type='submit' name='tech_modifier'>Modifier</button>";
+               
+                echo "</div>";
 
                 echo "</form>";
-            <?php} else {
+            } else {
                 echo "<p>Technicien non trouvé.</p>";
             }
         } else {

@@ -71,17 +71,22 @@ class Reparation
     public static function findbyidApp($id_app)
     {
         include("../Connexion.php");
-
+        $tab = [];
+        
         $requetePrep = $conn->prepare("select * from reparation where id_appareil=:id_appareil");
         $requetePrep->bindParam(':id_appareil', $id_app);
         $requetePrep->execute();
-        if ($requetePrep->rowCount() == 0) {
+        if ($requetePrep->rowCount() == 0) 
             return null;
-        }else {
-            $r = $requetePrep->fetch(PDO::FETCH_ASSOC);
-            return new Reparation($r['id'],$r['dateDebut'], $r['dateDepot'], $r['dateFinPrevue'],
-             $r['dateFinReelle'], $r['panne'], $r['cout'], $r['statut'], $r['id_appareil'], $r['id_technicien']);
+        $resultApp = $requetePrep->fetchAll();
+        foreach ($resultApp as $r) {
+            
+            $app = new Reparation($r['id'], $r['dateDebut'], $r['dateDepot'], $r['dateFinPrevue'], 
+            $r['dateFinReelle'], $r['panne'], $r['cout'], $r['statut'], $r['id_appareil'], $r['id_technicien']);
+           
+            $tab[] = $app;
         }
+        return $tab;
 
     }
     public static function findbyid($id)

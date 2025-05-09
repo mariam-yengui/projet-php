@@ -1,4 +1,4 @@
-<?php echo $_GET['error']; ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,7 +15,9 @@
         <p>Je vous souhaite la bienvenue !</p>
         <form method="post" action="../Controller/ControlUser.php">
             <input type="text" name="login" placeholder="Username" required>
+            <?php if (isset($_GET['error']) && $_GET['error'] == 5) { echo "<p style='color: red;'>Login ou mot de passe incorrectes</p>"; } ?>
             <input type="password" name="password" placeholder="Password" required>
+            <?php if (isset($_GET['error']) && $_GET['error'] == 5) { echo "<p style='color: red;'>Login ou mot de passe incorrectes</p>"; } ?>
             <button type="submit" name="connect">se connecter</button>
         </form>
         

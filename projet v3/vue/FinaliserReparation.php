@@ -36,7 +36,6 @@ if (!isset($_SESSION['login']))
 
             <div class="button-group">
                 <button type="submit" name="finaliser">Valider</button>
-                <button type="button"  onclick="window.location.href='../vue/techRep.php'" >Retour</button>
             </div>
         </form>
     </div>

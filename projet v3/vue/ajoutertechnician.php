@@ -50,7 +50,7 @@ if (!isset($_SESSION['login'])) {
 
         <div class="button-group">
             <button type="submit" name="tech_ajouter">Ajouter</button>
-            <button type="button" onclick="window.location.href='../vue/allTech.php'">Annuler</button>
+            
         </div>
     </form>
 </div>
