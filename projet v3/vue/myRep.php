@@ -80,7 +80,6 @@ if (!isset($_SESSION['login']))
         ?>
     </table>
     </div></div></main></section>
-    <!-- <a href='../Controller/ControlUser.php?logout=true'>Logout</a> -->
 </body>
 
 </html>

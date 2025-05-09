@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-        ini_set('display_errors', '1');
+ini_set('display_errors', '1');
 include("../model/Appareil.php");
 
 if (isset($_GET['idSup'])) {
@@ -20,7 +20,6 @@ if (isset($_POST['update_appareil'])) {
     $modele = $_POST['modele'];
     $num_serie = $_POST['num_serie'];
     $id_client = $_POST['id_client'];
-
     if (Appareil::update($id, $type, $marque, $modele, $num_serie, $id_client)) {
         header('Location: ../vue/allApp.php');
     } else {

@@ -128,7 +128,6 @@ if (!isset($_SESSION['login']))
         }
         ?>
     </table>
-    <!-- <a href='../Controller/ControlUser.php?logout=true'>Logout</a> -->
     </div></div></main></section>
 </body>
 

@@ -25,49 +25,12 @@ if (!isset($_SESSION['login']))
 
         </a>
         <ul class="side-menu top">
-            <!-- <li class="active">
-                <a href="#" class="active">
-                    <i class='bx bxs-dashboard'></i>
-                    <span class="text">Dashboard</span>
-                </a>
-            </li> -->
             <li class="active">
                 <a href="myRep.php" target="page-content" class="active">
                 <i class='bx bxs-briefcase-alt-2'></i>
                     <span class="text">Mes Reparations</span>
                 </a>
             </li>
-            <!-- <li>
-                <a href="ajoutRep.php" target="page-content">
-                <i class='bx bxs-add-to-queue' ></i>
-                    <span class="text">Ajouter Reparation</span>
-                </a>
-            </li>
-            <li>
-                <a href="allApp.php" target="page-content">
-                <i class='bx bx-desktop'></i>
-                    <span class="text">liste de Appareil</span>
-                </a>
-            </li>
-            <li>
-                <a href="ajouterAppareil.php" target="page-content">
-                <i class='bx bxs-add-to-queue' ></i>
-                    <span class="text">Ajouter Appareil</span>
-                </a>
-            </li>
-            <li>
-                <a href="allTech.php" target="page-content">
-                <i class='bx bxs-wrench'></i>
-              <span class="text">liste de Technicien</span>
-                </a>
-            </li>
-            <li>
-                <a href="ajoutertechnician.php" target="page-content">
-                <i class='bx bxs-add-to-queue' ></i>
-                    <span class="text">Ajouter Technicien</span>
-                </a>
-            </li> -->
-
         </ul>
         <ul class="side-menu">
             <li>

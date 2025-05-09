@@ -23,7 +23,6 @@ session_start();
                     <h3>Liste des techniciens</h3>
                 </div>
     <div>
-        <!-- border="1" style="width: 100%; border-collapse: collapse; text-align: center;" -->
         <table >
             <tr>
                 <th>id</th>
@@ -48,7 +47,6 @@ session_start();
                 }
             ?>
         </table>
-        <!-- <a href="../vue/ajoutertechnician.php">Ajouter un technician</a> -->
            
     </div>
             </div></div></main></section>

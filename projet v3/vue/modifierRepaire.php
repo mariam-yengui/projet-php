@@ -100,7 +100,6 @@ $appareils = Appareil::findAll();
 
         <div class="button-group">
             <button type="submit" name="update">Modifier</button>
-            <button type="button" onclick="window.location.href='../vue/allRep.php'">Annuler</button>
         </div>
     </form>
 </div>

@@ -67,26 +67,20 @@ if (isset($_POST['ajouter'])) {
 
         if (date('Y-m-d', strtotime($date_depot)) > date('Y-m-d')) {
             header('Location: ../vue/ajoutRep.php?erreur=2');
-            exit;
+           
         }
 
-        // $date_plus_un_an = date('Y-m-d', strtotime($date_depot . ' - 1 year'));
-
-        // if (date('Y-m-d', strtotime($date_depot)) > $date_plus_un_an) {
-        //     header('Location: ../vue/ajoutRep.php?erreur=4');
-        //     exit;
-        // }
 
         if (date('Y-m-d', strtotime($date_depot)) > date('Y-m-d', strtotime($date_fin_prevue))) {
             header('Location: ../vue/ajoutRep.php?erreur=3');
-            exit;
+            
         }
 
         if (Reparation::AjouterReparation( $date_depot, $date_fin_prevue, $panne, $cout , $id_appareil, $id_technicien, $statut)) {
             echo "<script>alert('Succes lors de l\'ajout de la réparation.');</script>";
             header('Location: ../vue/allRep.php');
 
-            exit;
+           
         } else {
             echo "<script>alert('Erreur lors de l\'ajout de la réparation.');</script>";
             header('Location: ../vue/allRep.php');
@@ -134,7 +128,7 @@ if (isset($_POST['update']))
             $date_fin_reelle = null;
         } else {
             $date_fin_reelle = $_POST['date_fin_reelle'];
-            $statut = 2; // Terminé
+            $statut = 2; 
         }
 
         if (Reparation::ModifierReparation($id, $date_depot, $date_fin_prevue, $panne, $cout, $id_appareil, $id_technicien, $statut, $date_fin_reelle)) {

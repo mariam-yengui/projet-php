@@ -25,12 +25,6 @@ if (!isset($_SESSION['login']))
 
         </a>
         <ul class="side-menu top">
-            <!-- <li class="active">
-                <a href="#" class="active">
-                    <i class='bx bxs-dashboard'></i>
-                    <span class="text">Dashboard</span>
-                </a>
-            </li> -->
             <li class="active">
                 <a href="allRep.php" target="page-content" class="active">
                 <i class='bx bxs-briefcase-alt-2'></i>

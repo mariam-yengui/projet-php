@@ -16,7 +16,7 @@
                 <div class="head">
                     <h3>Liste des appareils</h3>
                 </div>
-            <!-- style="width: 100%; border-collapse: collapse; text-align: center;" -->
+           
         <table>
             <tr>
                 <th>id</th>
@@ -46,8 +46,6 @@
             ?>
 
         </table>
-        <!-- <a href="../vue/ajouterAppareil.php">Ajouter un appareil</a> -->
-
         </div>
     </div>
 </main>

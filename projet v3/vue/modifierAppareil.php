@@ -54,17 +54,17 @@ $clients = User::findAllClients();
 
         <div class="form-group">
             <label for="marque">Marque:</label>
-            <input type="text" id="marque" name="marque" value="<?php echo htmlspecialchars($app->marque); ?>" required>
+            <input type="text" id="marque" name="marque" value="<?php echo $app->marque; ?>" required>
         </div>
 
         <div class="form-group">
             <label for="modele">Modèle:</label>
-            <input type="text" id="modele" name="modele" value="<?php echo htmlspecialchars($app->modele); ?>" required>
+            <input type="text" id="modele" name="modele" value="<?php echo $app->modele; ?>" required>
         </div>
 
         <div class="form-group">
             <label for="num_serie">Numéro de Série:</label>
-            <input type="text" id="num_serie" name="num_serie" value="<?php echo htmlspecialchars($app->num_serie); ?>" required>
+            <input type="text" id="num_serie" name="num_serie" value="<?php echo $app->num_serie; ?>" required>
         </div>
 
         <div class="form-group">
@@ -72,7 +72,7 @@ $clients = User::findAllClients();
             <select id="id_client" name="id_client" required>
                 <?php foreach ($clients as $client): ?>
                     <option value="<?php echo $client->id; ?>" <?php echo $client->id == $app->id_client ? 'selected' : ''; ?>>
-                        <?php echo htmlspecialchars($client->nom); ?>
+                        <?php echo $client->nom; ?>
                     </option>
                 <?php endforeach; ?>
             </select>
@@ -80,7 +80,6 @@ $clients = User::findAllClients();
 
         <div class="button-group">
             <button type="submit" name="update_appareil">Modifier</button>
-            <button type="button" onclick="window.location.href='../vue/allTechApp.php'">Annuler</button>
         </div>
     </form>
 </div>

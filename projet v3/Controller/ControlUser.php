@@ -14,9 +14,7 @@ if (isset($_POST['connect'])){
         if ($u != null) {
             
             if ($u->role == 0) {
-                
                 header('Location: ../vue/Accueil.php'); 
-                
             } elseif ($u->role == 1) {
                 header('Location: ../vue/InterfaceTechnicien.php');
             } elseif ($u->role == 2) {
@@ -64,11 +62,6 @@ if (isset($_POST['tech_ajouter'])) {
 }
 
 if (isset($_GET['logout'])) {
-  
-    
     session_destroy();
-   
     header('Location: ../vue/Authentification.php');
-   
-
 }
